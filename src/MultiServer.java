@@ -22,14 +22,14 @@ public class MultiServer
     {
         GsonBuilder gsonBuilder = new GsonBuilder();
         Gson gson = gsonBuilder.create();
-        try {
+        try {               // отсюда
             aoJSON = readFile(filePath, StandardCharsets.UTF_8);
         }
         catch (IOException e)
         {
             e.printStackTrace();
         }
-        ao = gson.fromJson(aoJSON, AirlineOperator.class);
+        ao = gson.fromJson(aoJSON, AirlineOperator.class);      // до сюда
 
 
 //        ao.addPlane("s7", new Plane("Airbus A380", "Green", 1, "Airbus factory",
